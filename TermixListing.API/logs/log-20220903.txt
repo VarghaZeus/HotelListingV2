@@ -1,0 +1,289 @@
+2022-09-03 13:25:11.994 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 13:25:12.209 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 13:25:12.218 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 13:25:12.219 -04:00 [INF] Hosting environment: Development
+2022-09-03 13:25:12.220 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 13:26:42.388 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 13:26:42.425 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 13:26:42.429 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 13:26:42.430 -04:00 [INF] Hosting environment: Development
+2022-09-03 13:26:42.431 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 14:04:07.182 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 14:04:07.220 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 14:04:07.224 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 14:04:07.225 -04:00 [INF] Hosting environment: Development
+2022-09-03 14:04:07.226 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 14:05:55.990 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 14:05:56.026 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 14:05:56.031 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 14:05:56.032 -04:00 [INF] Hosting environment: Development
+2022-09-03 14:05:56.033 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 14:45:04.436 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 14:45:04.473 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 14:45:04.478 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 14:45:04.479 -04:00 [INF] Hosting environment: Development
+2022-09-03 14:45:04.480 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 15:13:12.009 -04:00 [ERR] Failed executing DbCommand (154ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Hotels] ([Address], [CountryId], [Name], [Rating])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Hotels]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-09-03 15:13:12.464 -04:00 [ERR] An exception occurred in the database while saving changes for context type 'TermixListing.API.Core.Data.termixListViewContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "TermixViewAPIDB", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2df43958-da20-4460-a75c-4bbc8cba0973
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "TermixViewAPIDB", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2df43958-da20-4460-a75c-4bbc8cba0973
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-09-03 15:13:12.578 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Hotels_Countries_CountryId". The conflict occurred in database "TermixViewAPIDB", table "dbo.Countries", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2df43958-da20-4460-a75c-4bbc8cba0973
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TermixListing.API.Core.Repository.GenericRepository`1.AddAsync(T entity) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\GenericRepository.cs:line 18
+   at TermixListing.API.Core.Controllers.HotelsController.PostHotel(CreateHotelDTO createHotelDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Controllers\HotelsController.cs:line 91
+   at lambda_method67(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 17:33:24.124 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 17:33:24.775 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 17:33:24.780 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 17:33:24.781 -04:00 [INF] Hosting environment: Development
+2022-09-03 17:33:24.782 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 17:35:53.211 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 17:35:53.256 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 17:35:53.261 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 17:35:53.263 -04:00 [INF] Hosting environment: Development
+2022-09-03 17:35:53.264 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 18:00:27.951 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 18:00:27.994 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 18:00:27.998 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 18:00:28.000 -04:00 [INF] Hosting environment: Development
+2022-09-03 18:00:28.000 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 18:02:21.120 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 18:02:21.166 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 18:02:21.171 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 18:02:21.172 -04:00 [INF] Hosting environment: Development
+2022-09-03 18:02:21.173 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 19:39:01.550 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 19:39:01.591 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 19:39:01.596 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 19:39:01.597 -04:00 [INF] Hosting environment: Development
+2022-09-03 19:39:01.598 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 19:39:58.970 -04:00 [WRN] User password validation failed: PasswordRequiresNonAlphanumeric;PasswordRequiresLower;PasswordRequiresUpper.
+2022-09-03 19:41:13.918 -04:00 [WRN] User password validation failed: PasswordRequiresNonAlphanumeric.
+2022-09-03 19:43:09.755 -04:00 [WRN] User validation failed: DuplicateUserName.
+2022-09-03 19:48:32.405 -04:00 [WRN] User validation failed: DuplicateUserName.
+2022-09-03 23:22:06.301 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 23:22:06.585 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 23:22:06.615 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 23:22:06.624 -04:00 [INF] Hosting environment: Development
+2022-09-03 23:22:06.634 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 23:24:13.748 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'System.String', SecurityKey: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at TermixListing.API.Core.Repository.AuthManager.GenerateToken(ApiUser user) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\AuthManager.cs:line 87
+   at TermixListing.API.Core.Repository.AuthManager.Login(LoginDTO loginDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\AuthManager.cs:line 37
+   at TermixListing.API.Core.Controllers.AccountController.Login(LoginDTO loginDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Controllers\AccountController.cs:line 47
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 23:24:48.300 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'System.String', SecurityKey: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at TermixListing.API.Core.Repository.AuthManager.GenerateToken(ApiUser user) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\AuthManager.cs:line 87
+   at TermixListing.API.Core.Repository.AuthManager.Login(LoginDTO loginDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\AuthManager.cs:line 37
+   at TermixListing.API.Core.Controllers.AccountController.Login(LoginDTO loginDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Controllers\AccountController.cs:line 47
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 23:25:25.893 -04:00 [WRN] Invalid password for user.
+2022-09-03 23:25:30.962 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'System.String', SecurityKey: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at TermixListing.API.Core.Repository.AuthManager.GenerateToken(ApiUser user) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\AuthManager.cs:line 87
+   at TermixListing.API.Core.Repository.AuthManager.Login(LoginDTO loginDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\AuthManager.cs:line 37
+   at TermixListing.API.Core.Controllers.AccountController.Login(LoginDTO loginDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Controllers\AccountController.cs:line 47
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 23:27:32.511 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 23:27:33.200 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 23:27:33.262 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 23:27:33.289 -04:00 [INF] Hosting environment: Development
+2022-09-03 23:27:33.297 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 23:28:36.574 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'System.String', SecurityKey: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at TermixListing.API.Core.Repository.AuthManager.GenerateToken(ApiUser user) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\AuthManager.cs:line 87
+   at TermixListing.API.Core.Repository.AuthManager.Login(LoginDTO loginDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Repository\AuthManager.cs:line 37
+   at TermixListing.API.Core.Controllers.AccountController.Login(LoginDTO loginDTO) in C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\Controllers\AccountController.cs:line 47
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-03 23:31:20.992 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 23:31:21.407 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 23:31:21.449 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 23:31:21.457 -04:00 [INF] Hosting environment: Development
+2022-09-03 23:31:21.464 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 23:39:44.198 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 23:39:44.515 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 23:39:44.547 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 23:39:44.557 -04:00 [INF] Hosting environment: Development
+2022-09-03 23:39:44.565 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 23:44:10.341 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 23:44:10.836 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 23:44:10.917 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 23:44:10.938 -04:00 [INF] Hosting environment: Development
+2022-09-03 23:44:10.963 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-09-03 23:53:16.905 -04:00 [INF] Now listening on: https://localhost:7169
+2022-09-03 23:53:17.326 -04:00 [INF] Now listening on: http://localhost:5169
+2022-09-03 23:53:17.409 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-03 23:53:17.418 -04:00 [INF] Hosting environment: Development
+2022-09-03 23:53:17.423 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\

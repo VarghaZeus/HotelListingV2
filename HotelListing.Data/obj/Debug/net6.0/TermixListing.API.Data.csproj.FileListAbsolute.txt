@@ -1,0 +1,24 @@
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.csproj.AssemblyReference.cache
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.AssemblyInfoInputs.cache
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.AssemblyInfo.cs
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.csproj.CoreCompileInputs.cache
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\bin\Debug\net6.0\TermixListing.API.Data.deps.json
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\bin\Debug\net6.0\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\bin\Debug\net6.0\TermixListing.API.Data.pdb
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\refint\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.pdb
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\HotelListing.Data\obj\Debug\net6.0\ref\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\bin\Debug\net6.0\TermixListing.API.Data.deps.json
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\bin\Debug\net6.0\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\bin\Debug\net6.0\TermixListing.API.Data.pdb
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.csproj.AssemblyReference.cache
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.AssemblyInfoInputs.cache
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.AssemblyInfo.cs
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.csproj.CoreCompileInputs.cache
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\refint\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\TermixListing.API.Data.pdb
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\HotelListing.Data\obj\Debug\net6.0\ref\TermixListing.API.Data.dll

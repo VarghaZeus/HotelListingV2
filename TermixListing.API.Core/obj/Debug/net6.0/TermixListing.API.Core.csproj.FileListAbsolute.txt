@@ -1,0 +1,34 @@
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Core.deps.json
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Core.dll
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Core.pdb
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Data.pdb
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.csproj.AssemblyReference.cache
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.AssemblyInfoInputs.cache
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.AssemblyInfo.cs
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.csproj.CopyComplete
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.dll
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\refint\TermixListing.API.Core.dll
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.pdb
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\ref\TermixListing.API.Core.dll
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Core.runtimeconfig.json
+C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.genruntimeconfig.cache
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Core.deps.json
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Core.runtimeconfig.json
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Core.dll
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Core.pdb
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Data.dll
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\bin\Debug\net6.0\TermixListing.API.Data.pdb
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.csproj.AssemblyReference.cache
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.AssemblyInfoInputs.cache
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.AssemblyInfo.cs
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.csproj.CopyComplete
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.dll
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\refint\TermixListing.API.Core.dll
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.pdb
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\TermixListing.API.Core.genruntimeconfig.cache
+C:\Users\Sahar\source\repos\Termix listing - Final\Termix listing\TermixListing.API.Core\obj\Debug\net6.0\ref\TermixListing.API.Core.dll

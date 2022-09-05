@@ -7,18 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TermixListing.API.Data;
 using AutoMapper;
-using TermixListing.API.Contracts;
-using TermixListing.API.Models.Hotel;
+using TermixListing.API.Core.Contracts;
+using TermixListing.API.Core.Models.Hotel;
 using Microsoft.AspNetCore.Authorization;
-using TermixListing.API.Models.Country;
-using TermixListing.API.Models;
-using TermixListing.API.Repository;
+using TermixListing.API.Core.Models.Country;
+using TermixListing.API.Core.Models;
+using TermixListing.API.Core.Repository;
+using TermixListing.API.Core.Exceptions;
 
 namespace TermixListing.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class HotelsController : ControllerBase
     {
         private readonly IHotelRepository _hotelRepository;
@@ -36,8 +37,8 @@ namespace TermixListing.API.Controllers
         public async Task<ActionResult<IEnumerable<HotelDto>>> GetHotels()
         {
 
-            var hotels = await _hotelRepository.GetAllAsync();
-            return Ok(_mapper.Map<List<HotelDto>>(hotels));
+            var hotels = await _hotelRepository.GetAllAsync<HotelDto>();
+            return Ok(hotels);
         }
         // GET: api/Hotels?StartIndex=0&PageNumber=2&PageSize=4
         [HttpGet]
@@ -50,39 +51,31 @@ namespace TermixListing.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<HotelDto>> GetHotel(int id)
         {
-            var hotel = await _hotelRepository.GetAsync(id);
-            if (hotel == null)
-          {
-              return NotFound();
-          }
-
-            return  Ok(_mapper.Map<HotelDto>(hotel)); 
+            var hotels = await _hotelRepository.GetAsync<HotelDto>(id);
+            return Ok(hotels);
         }
 
         // PUT: api/Hotels/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutHotel(int id, HotelDto hoteldto)
         {
+
             if (id != hoteldto.Id)
             {
-                return BadRequest();
+                throw new BadRequestException(id);
             }
-            var hotel = await _hotelRepository.GetAsync(id);
-            if(hotel == null)
-            {
-                return NotFound();
-            }
-            _mapper.Map(hoteldto, hotel);
+
             try
             {
-                await _hotelRepository.UpdateAsync(hotel);
+                await _hotelRepository.UpdateAsync(id, hoteldto);
             }
             catch (DbUpdateConcurrencyException)
             {
                 if (!await HotelExists(id))
                 {
-                    return NotFound();
+                    throw new NotFoundException("Hotel", id);
                 }
                 else
                 {
@@ -96,11 +89,11 @@ namespace TermixListing.API.Controllers
         // POST: api/Hotels
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Hotel>> PostHotel(CreateHotelDTO createHotelDTO)
+        [Authorize]
+        public async Task<ActionResult<HotelDto>> PostHotel(CreateHotelDTO createHotelDTO)
         {
-            var hotel = _mapper.Map<Hotel>(createHotelDTO);
-            await _hotelRepository.AddAsync(hotel);
-            return CreatedAtAction("GetHotel", new { id = hotel.Id }, hotel);
+            var hotel = await _hotelRepository.AddAsync<CreateHotelDTO, HotelDto>(createHotelDTO);
+            return CreatedAtAction(nameof(GetHotel), new { id = hotel.Id }, hotel);
         }
 
         // DELETE: api/Hotels/5
@@ -110,7 +103,7 @@ namespace TermixListing.API.Controllers
             var hotel = await _hotelRepository.GetAsync(id);
             if (hotel == null)
             {
-                return NotFound();
+                throw new NotFoundException("Hotel", id);
             }
             await _hotelRepository.DeleteAsync(id);
 

@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TermixListing.API.Data;
-using TermixListing.API.Models.Country;
+using TermixListing.API.Core.Models.Country;
 using AutoMapper;
-using TermixListing.API.Contracts;
+using TermixListing.API.Core.Contracts;
 using Microsoft.AspNetCore.Authorization;
-using TermixListing.API.Middleware;
-using TermixListing.API.Exceptions;
-using TermixListing.API.Models;
+using TermixListing.API.Core.Middleware;
+using TermixListing.API.Core.Exceptions;
+using TermixListing.API.Core.Models;
 using Microsoft.AspNetCore.OData.Query;
 
 namespace TermixListing.API.Controllers
@@ -42,10 +42,8 @@ namespace TermixListing.API.Controllers
 
         {
             //select * from Countries
-            var countries = await _countriesRepository.GetAllAsync();
-            //
-            var records = _mapper.Map<List<GetCountryDto>>(countries);
-            return Ok(records);
+            var countries = await _countriesRepository.GetAllAsync<GetCountryDto>();
+            return Ok(countries);
         } 
         // GET: api/Countries?StartIndex=0&PageNumber=2&PageSize=4
         [HttpGet]
@@ -80,29 +78,17 @@ namespace TermixListing.API.Controllers
         public async Task<IActionResult> PutCountry(int id, UpdateCountryDto updateCountryDto)
 
         {
-            //if (id != country.Id)
             if (id != updateCountryDto.Id)
 
             {
                 _logger.LogWarning($"Invalid Record Id: {id} for {nameof(PutCountry)}.");
                 throw new BadRequestException(id);
-                //return BadRequest("Invalid Record Id");
             } 
-              
-            //_context.Entry(country).State = EntityState.Modified;
-
-            var country = await _countriesRepository.GetAsync(id);
-            if (country == null)
-            {
-                _logger.LogWarning($"No Record Found in{nameof(PutCountry)} With Id: {id}.");
-                throw new NotFoundException(nameof(PutCountry), id);
-            }
-            _mapper.Map(updateCountryDto, country);
-
+            
 
             try
             {
-                await _countriesRepository.UpdateAsync(country);
+                await _countriesRepository.UpdateAsync(id ,updateCountryDto);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -124,11 +110,10 @@ namespace TermixListing.API.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<Country>> PostCountry(CreateCountryDto CreateCountryDto)
+        public async Task<ActionResult<GetCountryDetailsDto>> PostCountry(CreateCountryDto CreateCountryDto)
         {
-            var country = _mapper.Map<Country>(CreateCountryDto);
-            await _countriesRepository.AddAsync(country);
-            return CreatedAtAction("GetCountry", new { id = country.Id }, country);
+            var country = await _countriesRepository.AddAsync<CreateCountryDto, GetCountryDto>(CreateCountryDto);
+            return CreatedAtAction(nameof(GetCountry), new { id = country.Id }, country);
         }
 
 
@@ -137,15 +122,7 @@ namespace TermixListing.API.Controllers
         [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteCountry(int id)
         {
-            var country = await _countriesRepository.GetAsync(id);
-            if (country == null)
-            {
-                _logger.LogWarning($"No Record Found in{nameof(DeleteCountry)} With Id: {id}.");
-                throw new NotFoundException(nameof(DeleteCountry), id);
-            }
-
             await _countriesRepository.DeleteAsync(id);
-
             return NoContent();
         }
 

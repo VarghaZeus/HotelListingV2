@@ -1,0 +1,40 @@
+2022-07-10 20:33:23.091 -04:00 [INF] Now listening on: https://localhost:7169
+2022-07-10 20:33:23.139 -04:00 [INF] Now listening on: http://localhost:5169
+2022-07-10 20:33:23.148 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-10 20:33:23.149 -04:00 [INF] Hosting environment: Development
+2022-07-10 20:33:23.150 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-07-10 20:44:13.700 -04:00 [INF] Now listening on: https://localhost:7169
+2022-07-10 20:44:13.737 -04:00 [INF] Now listening on: http://localhost:5169
+2022-07-10 20:44:13.742 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-10 20:44:13.743 -04:00 [INF] Hosting environment: Development
+2022-07-10 20:44:13.744 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-07-10 21:56:57.840 -04:00 [INF] Now listening on: https://localhost:7169
+2022-07-10 21:56:57.876 -04:00 [INF] Now listening on: http://localhost:5169
+2022-07-10 21:56:57.881 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-10 21:56:57.882 -04:00 [INF] Hosting environment: Development
+2022-07-10 21:56:57.884 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-07-10 22:00:47.821 -04:00 [INF] Now listening on: https://localhost:7169
+2022-07-10 22:00:47.863 -04:00 [INF] Now listening on: http://localhost:5169
+2022-07-10 22:00:47.874 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-10 22:00:47.876 -04:00 [INF] Hosting environment: Development
+2022-07-10 22:00:47.878 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-07-10 22:25:24.624 -04:00 [INF] Now listening on: https://localhost:7169
+2022-07-10 22:25:24.661 -04:00 [INF] Now listening on: http://localhost:5169
+2022-07-10 22:25:24.666 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-10 22:25:24.667 -04:00 [INF] Hosting environment: Development
+2022-07-10 22:25:24.667 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-07-10 22:45:43.798 -04:00 [INF] Now listening on: https://localhost:7169
+2022-07-10 22:45:43.841 -04:00 [INF] Now listening on: http://localhost:5169
+2022-07-10 22:45:43.848 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-10 22:45:43.849 -04:00 [INF] Hosting environment: Development
+2022-07-10 22:45:43.850 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-07-10 23:05:54.389 -04:00 [INF] Now listening on: https://localhost:7169
+2022-07-10 23:05:54.427 -04:00 [INF] Now listening on: http://localhost:5169
+2022-07-10 23:05:54.432 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-10 23:05:54.434 -04:00 [INF] Hosting environment: Development
+2022-07-10 23:05:54.435 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\
+2022-07-10 23:56:05.613 -04:00 [INF] Now listening on: https://localhost:7169
+2022-07-10 23:56:05.650 -04:00 [INF] Now listening on: http://localhost:5169
+2022-07-10 23:56:05.655 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-10 23:56:05.656 -04:00 [INF] Hosting environment: Development
+2022-07-10 23:56:05.656 -04:00 [INF] Content root path: C:\Users\Sahar\source\repos\Termix listing\Termix listing\TermixListing.API\

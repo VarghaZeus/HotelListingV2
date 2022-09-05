@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TermixListing.API.Contracts;
-using TermixListing.API.Models.Users;
+using TermixListing.API.Core.Contracts;
+using TermixListing.API.Core.Models.Users;
 
 namespace TermixListing.API.Controllers
 {
