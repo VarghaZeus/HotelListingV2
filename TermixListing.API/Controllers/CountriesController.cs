@@ -13,6 +13,8 @@ using TermixListing.API.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using TermixListing.API.Middleware;
 using TermixListing.API.Exceptions;
+using TermixListing.API.Models;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace TermixListing.API.Controllers
 {
@@ -33,7 +35,8 @@ namespace TermixListing.API.Controllers
         }
 
         // GET: api/Countries
-        [HttpGet]
+        [HttpGet("GetAll")]
+        [EnableQuery]
         public async Task<ActionResult<IEnumerable<GetCountryDto>>> GetCountries()
 
         {
@@ -42,6 +45,13 @@ namespace TermixListing.API.Controllers
             //
             var records = _mapper.Map<List<GetCountryDto>>(countries);
             return Ok(records);
+        }
+        // GET: api/Countries?StartIndex=0&PageNumber=2&PageSize=4
+        [HttpGet]
+        public async Task<ActionResult<PageResult<GetCountryDto>>> GetPagedCountry([FromQuery] QueryParameters queryParameters)
+        {
+            var PagedcountriesResult = await _countriesRepository.GetAllAsync<GetCountryDto>(queryParameters);
+            return Ok(PagedcountriesResult);
         }
 
         // GET: api/Countries/5

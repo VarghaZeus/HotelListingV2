@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using TermixListing.API.Contracts;
 using TermixListing.API.Data;
 
@@ -8,7 +9,7 @@ namespace TermixListing.API.Repository
     {
         private readonly termixListViewContext _context;
 
-        public CountriesRepository(termixListViewContext context) : base(context)
+        public CountriesRepository(termixListViewContext context, IMapper mapper) : base(context, mapper)
         {
             this._context = context;
         }

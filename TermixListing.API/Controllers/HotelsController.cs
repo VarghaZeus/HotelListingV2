@@ -10,6 +10,9 @@ using AutoMapper;
 using TermixListing.API.Contracts;
 using TermixListing.API.Models.Hotel;
 using Microsoft.AspNetCore.Authorization;
+using TermixListing.API.Models.Country;
+using TermixListing.API.Models;
+using TermixListing.API.Repository;
 
 namespace TermixListing.API.Controllers
 {
@@ -29,14 +32,20 @@ namespace TermixListing.API.Controllers
         }
 
         // GET: api/Hotels
-        [HttpGet]
+        [HttpGet("GetAll")]
         public async Task<ActionResult<IEnumerable<HotelDto>>> GetHotels()
         {
 
             var hotels = await _hotelRepository.GetAllAsync();
             return Ok(_mapper.Map<List<HotelDto>>(hotels));
         }
-
+        // GET: api/Hotels?StartIndex=0&PageNumber=2&PageSize=4
+        [HttpGet]
+        public async Task<ActionResult<PageResult<HotelDto>>> GetPagedCountry([FromQuery] QueryParameters queryParameters)
+        {
+            var PagedHotelsResult = await _hotelRepository.GetAllAsync<HotelDto>(queryParameters);
+            return Ok(PagedHotelsResult);
+        }
         // GET: api/Hotels/5
         [HttpGet("{id}")]
         public async Task<ActionResult<HotelDto>> GetHotel(int id)
