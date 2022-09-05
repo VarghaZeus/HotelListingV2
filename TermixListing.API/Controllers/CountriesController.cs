@@ -46,7 +46,7 @@ namespace TermixListing.API.Controllers
             //
             var records = _mapper.Map<List<GetCountryDto>>(countries);
             return Ok(records);
-        }
+        } 
         // GET: api/Countries?StartIndex=0&PageNumber=2&PageSize=4
         [HttpGet]
         public async Task<ActionResult<PageResult<GetCountryDto>>> GetPagedCountry([FromQuery] QueryParameters queryParameters)
